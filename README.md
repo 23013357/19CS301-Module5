@@ -56,16 +56,20 @@ Step 6:	  Terminate the program.
 
 ### PROGRAM
 ```
-class student:
-    def __init__(self):
-        print("Inside Constructor")
-        print("Object initialized")
-        print("Hello, my name is Emma")
+class Student:
+    def __init__(self, name):
+        print('Inside Constructor')
+        self.name = name
+        print('Object initialized')
+    def show(self):
+        print('Hello, my name is', self.name)
     def __del__(self):
         print("Inside destructor")
         print("Object destroyed")
-s2=student()
-del s2
+s1 = Student('Emma')
+s1.show()
+
+del s1
 ```
 ### OUTPUT
  ![image](https://github.com/user-attachments/assets/bff64e83-c99e-4102-ab1d-ec15d0c3fae4)
