@@ -72,7 +72,7 @@ s1.show()
 del s1
 ```
 ### OUTPUT
- ![image](https://github.com/user-attachments/assets/bff64e83-c99e-4102-ab1d-ec15d0c3fae4)
+ ![image](https://github.com/23013357/19CS301-Module5/blob/main/ll.png)
 
 ### RESULT
 Thus the python program for Class Student with a destructor, was implemented and executed successfully.
