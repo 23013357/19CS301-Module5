@@ -183,30 +183,28 @@ Step 16:	Terminate the program.
 
 ### PROGRAM
 ```
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-class PersonDetails(Person):
-    def __init__(self, name, age, person_id):
-        super().__init__(name, age)  # Call the parent class constructor
-        self.person_id = person_id
-
-class DisplayDetails(PersonDetails):
-    def __init__(self, name, age, person_id):
-        super().__init__(name, age, person_id)
-
-    def show_details(self):
-        return f"{self.name} {self.age} {self.person_id}"
-
-name = input()
-age = int(input())
-person_id = int(input())
-
-person = DisplayDetails(name, age, person_id)
-
-print(person.show_details())
+class Parent:
+   def __init__(self,name):
+     self.name = name
+   def getName(self):
+     return self.name
+class Child(Parent):
+   def __init__(self,name,age):
+     Parent.__init__(self,name)
+     self.age = age
+   def getAge(self):
+     return self.age
+class Grandchild(Child):
+   def __init__(self,name,age,id):
+     Child.__init__(self,name,age)
+     self.id=id
+   def getid(self):
+     return self.id
+name=input()
+age=int(input())
+id=int(input())
+gc = Grandchild(name,age,id)
+print(gc.getName(), gc.getAge(), gc.getid())
 ```
 ### OUTPUT
 ![image](https://github.com/user-attachments/assets/e87e458f-8ee8-4d8d-b2f7-a8f80354f44c)
